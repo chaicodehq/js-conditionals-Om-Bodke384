@@ -25,45 +25,12 @@
  * @returns {string} The letter grade or "INVALID"
  */
 export function calculateGrade(score, hasExtraCredit) {
-  if(score<0 || score>100){
-    return "INVALID"
-  }else if(score>=90 && score<=100){
-    return "A"
-  }else if(score>=80 && score<=89){
-    return "B"
-  }else if(score>=70 && score<=79){
-    return "C"
-  }else if(score>=60 && score<=69){
-    return "D"
-  }else if(scroe>=0 && score<=59){
-    return "F"
-  }
+  if(score<0 || score>100) return "INVALID";
+  if(hasExtraCredit === true && score + 5 <= 100) score += 5
+  if(score>=90) return "A"
+  if(score>=80) return "B"
+  if(score>=70) return "C"
+  if(score>=60) return "D"
+  return "F"
 
-  else if(score>=90 && score<=100 && hasExtraCredit=true){
-    score = score + 5
-    if(score>=90 && score<=100){
-    return "A"
-  }
-    
-  }else if(score>=80 && score<=89 && hasExtraCredit=true ){
-    score = score + 5
-    if(score>=80 && score<=89){
-    return "B"
-    }
-  }else if(score>=70 && score<=79 hasExtraCredit=true){
-    score = score + 5
-     if(score>=70 && score<=79){
-    return "C"
-     }
-  }else if(score>=60 && score<=69 hasExtraCredit=true){
-    score =score +5
-    if(score>=60 && score<=69){
-    return "D"
-    }
-  }else if(scroe>=0 && score<=59 hasExtraCredit=true){
-    score = score  + 5
-    if(score>=0 && score<=59){
-    return "F"
-    }
-  }
 }

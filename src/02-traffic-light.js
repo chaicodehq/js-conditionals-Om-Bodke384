@@ -22,14 +22,13 @@
  * @returns {string} The driving action to take
  */
 export function getTrafficAction(color) {
-  // color1 = color.toLowerCase() === "green"
-  if(color.toLowerCase() === "green"){
+  if(color.toLocaleLowerCase()==="green"){
     return "GO"
-  }if else(color.toLowerCase()==="yellow"){
+  }else if (color.toLocaleLowerCase()==="yellow"){
     return "SLOW DOWN"
-  }if else(color.toLowerCase()==="red"){
+  }else if (color.toLocaleLowerCase()==="red"){
     return "STOP"
-  }if else(color.toLowerCase()==="flashing red"){
+  }else if (color.toLocaleLowerCase()==="flashing red"){
     return "STOP AND PROCEED WITH CAUTION"
   }else{
     return "INVALID SIGNAL"
